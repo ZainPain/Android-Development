@@ -1,6 +1,8 @@
 <resources>
-    <string name = "app_name"> InteractiveLayouts </string>
-    <string name = "action_settings"> Settings </string>
-    <string name = "textViewButton"> Click Me! </string>
-    <string name = "largeText"> Text </string>
+    <string name="app_name"> InteractiveLayouts </string>
+    <string name="action_settings"> Settings </string>
+    <string name="textViewButton"> Click Me! </string>
+    <string name="largeText"> Text </string>
+    <string name="gestureTitle">Gestures</string>
+    <string name="gestureAction">gestureAction occurred!</string>
 </resources>

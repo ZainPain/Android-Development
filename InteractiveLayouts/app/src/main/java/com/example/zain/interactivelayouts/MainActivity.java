@@ -1,5 +1,6 @@
 package com.example.zain.interactivelayouts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+       */
 
         Button textViewButton = (Button) findViewById(R.id.textViewButton);
 
@@ -54,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        Button switchToGestures = (Button) findViewById(R.id.switchButton);
+
+        switchToGestures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent switchIntent = new Intent(getApplicationContext(),Gestures.class);
+                startActivity(switchIntent);
+
+            }
+        });
 
 //        RelativeLayout mainLayout = new RelativeLayout(this);
 //        mainLayout.setBackgroundColor(Color.BLACK);
