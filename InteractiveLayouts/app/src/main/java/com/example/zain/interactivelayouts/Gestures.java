@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.view.MotionEvent;
 import android.view.GestureDetector;
@@ -23,17 +25,26 @@ public class Gestures extends AppCompatActivity implements GestureDetector.OnGes
         gestureAction = (TextView) findViewById(R.id.gestureActionTextView);
         this.gestureDetector = new GestureDetectorCompat(this,this);
         gestureDetector.setOnDoubleTapListener(this);
+
+        Button gestureButton = (Button) findViewById(R.id.gestureButton);
+
+        gestureButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                gestureAction.setText("Button was tapped!!");
+            }
+        });
     }
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent e) {
         //gestureAction.setText("onSingleTapConfirmed occurred!");
-        return false;
+        return true;
     }
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
-        gestureAction.setText("onDoubleTap occurred!");
+        //gestureAction.setText("onDoubleTap occurred!");
         return true;
     }
 
@@ -45,31 +56,31 @@ public class Gestures extends AppCompatActivity implements GestureDetector.OnGes
 
     @Override
     public boolean onDown(MotionEvent e) {
-        gestureAction.setText("onDown occurred!");
+        //gestureAction.setText("onDown occurred!");
         return true;
     }
 
     @Override
     public void onShowPress(MotionEvent e) {
-        gestureAction.setText("onShowPress occurred!");
+        //gestureAction.setText("onShowPress occurred!");
 
     }
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        gestureAction.setText("onSingleTapUp occurred!");
+        //gestureAction.setText("onSingleTapUp occurred!");
         return true;
     }
 
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        gestureAction.setText("onScroll occurred!");
+        gestureAction.setText("you scrolled !!");
         return true;
     }
 
     @Override
     public void onLongPress(MotionEvent e) {
-        gestureAction.setText("onLongPress occurred!");
+        //gestureAction.setText("onLongPress occurred!");
 
 
     }

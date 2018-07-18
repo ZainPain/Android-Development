@@ -4,5 +4,6 @@
     <string name="textViewButton"> Click Me! </string>
     <string name="largeText"> Text </string>
     <string name="gestureTitle">Gestures</string>
-    <string name="gestureAction">gestureAction occurred!</string>
+    <string name="gestureAction">Gesture Action occurred!</string>
+    <string name="gestureButton">Tap me!</string>
 </resources>
